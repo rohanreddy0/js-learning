@@ -1,19 +1,23 @@
 function getComputerChoice(){
     const randomNo = Math.random();
-    console.log(randomNo);
     if(randomNo <= 0.333){
+        console.log("Computer chose: rock")
         return "rock";
     }
     else if (randomNo > 0.333 && randomNo <= 0.666){
+        console.log("Computer chose: paper")
         return "paper";
     } else {
+        console.log("Computer chose: scissors")
         return "scissors";
     }
 }
 
 function getHumanChoice(){
     let humanChoice;
-    return humanChoice = prompt("Choose rock, paper or scissors").toLowerCase();
+    humanChoice = prompt("Choose rock, paper or scissors").toLowerCase();
+    console.log(`You chose: ${humanChoice}`);
+    return humanChoice;
 }
 
 function playRound(humanChoice, computerChoice){
@@ -49,3 +53,4 @@ function playRound(humanChoice, computerChoice){
 let humanScore = 0;
 let computerScore = 0;
 
+console.log(playRound(getHumanChoice(), getComputerChoice()));
