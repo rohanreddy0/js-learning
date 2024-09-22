@@ -5,13 +5,13 @@ const container = document.querySelector('#container');
 const redText = document.createElement("div");
 redText.classList.add('red-text');
 redText.textContent = "Hey I'm Red!";
-container.appendChild(redText);
+
 
 // Add blue h3 text
 const blueTexth3 = document.createElement("h3");
 blueTexth3.classList.add('blue-text');
 blueTexth3.textContent = "I'm a blue h3!";
-container.appendChild(blueTexth3);
+
 
 // Div black border, pink background
 const multiDiv = document.createElement("div");
@@ -25,9 +25,16 @@ const multiDiv_subText = document.createElement("p");
 multiDiv_subText.textContent = "ME TOO!";
 multiDiv.appendChild(multiDiv_subText);
 
-container.appendChild(multiDiv);
 
 
+// Button
+
+const btn = document.querySelector('#btn');
+btn.addEventListener('click', () => {
+    container.appendChild(redText);
+    container.appendChild(blueTexth3);
+    container.appendChild(multiDiv);
+});
 
 
 
