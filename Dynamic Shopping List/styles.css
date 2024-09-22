@@ -1,0 +1,10 @@
+.item-entry {
+    display: flex;
+    gap: 10px;
+}
+
+.li-container {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+}
